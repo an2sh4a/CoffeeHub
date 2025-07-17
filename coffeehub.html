@@ -112,6 +112,42 @@
       <a href="#" class="hover:text-white" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
     </p>
   </div>
-</section>
+  <p span id="lat"></p>
+  <p span id="lon"></p>
+    </section>
+  <style>
+    window-onload = function() {
+        if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(getPositions, showError);
+        } else {
+            console.log("Browser doesn't support Geolocation");
+        }
+    }
+    function getPositions(position) {
+        document.getElementById("lat").innerText = position.coords.latitude;
+        document.getElementById("lon").innerText = position.coords.longitude;
+    }
+    function showError(error) {
+        let mssg = "";
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                mssg = "Permission was denied";
+                break;
+            case error.TIMEOUT:
+                mssg = "Timed out";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                mssg = "Can't fetch position";
+                break;
+            case error.UNKNOWN_ERROR:
+                mssg = "Unknown error";
+                break;
+        }
+        displayError(mssg);
+    }
+    function displayError(mssg) {
+        document.getElementById("error").innerText = mssg;
+    }
+  </style>
 </body>
 </html>
