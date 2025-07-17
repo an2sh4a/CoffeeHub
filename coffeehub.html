@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeHub</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+
+</head>
+<body>
+    <nav class="bg-amber-800 text-white p-4">
+        <div class="mx-auto flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold">CoffeeHub</a>
+            <button id="navToggle" class="md:hidden text-2xl hidden" aria-label="Toggle Menu"></button>
+            <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="navMenu" class="hidden md:flex space-x-7">
+                <li><a href="#home" class="hover:font-bold"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#menu" class="hover:font-bold"><i class="fa-solid fa-coffee"></i> Menu</a></li>
+                <li><a href="#contact" class="hover:font-bold"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+        <ul id="mobile" class="md:hidden text-white space-y-3 pt-5 hidden">
+            <li><a href="#home" class="hover:font-bold"><i class="fa-solid fa-house "></i> Home</a></li>
+                    <li><a href="#menu" class="hover:font-bold"><i class="fa-solid fa-coffee"></i> Menu</a></li>
+                    <li><a href="#contact" class="hover:font-bold"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home" class="relative bg-[url('bgcoffee.jpeg')] bg-cover bg-center h-screen">
+        <div class=" absolute inset-0 bg-black/60"> </div>
+        <div class="relative mx-auto max-w-4xl flex flex-col justify-between items-center text-center px-5">
+            <h1 class="text-white text-4xl font-bold">We welcome you to CoffeeHub</h1>
+            <p class="text-white text-2xl">A place for coffee lovers to explore popular hot coffee drinks.</p>
+            <a href="#menu" class="bg-amber-800 text-white inline-flex items-center hover:underline h-10 py-5 px-5">Go to Menu</a>
+        </div>
+    </section>
+
+    <section id="video">
+        <h2 class="text-3xl text-center text-amber-800 font-bold">Brewing Method</h2>
+        <video controls class="w-full max-w-4xl flex flex-col justify-center items-center">
+            <source src="./Set2_Video.mp4" type="video/mp4">
+            Your browser does not support the video.
+            <track src="./coffee.vtt" kind="subtitles" srclang="en" label="English">
+        </video>
+    </section>
+    <section id="audio">
+        <audio controls>
+            <source src="./coffee.mp3" type="audio/mpeg">
+            Your browser does not support the audio.
+        </audio>
+    </section>
+    <section id="detail">
+        <form class="flex flex-col">
+            <input type="text" placeholder="Enter your name" class="border border-amber-800 rounded-lg p-2 mb-4 max-w-md text-center">
+            <input type="email" placeholder="Enter your email" class="border border-amber-800 rounded-lg p-2 mb-4 max-w-md text-center">
+            <textarea placeholder="Enter your favorite coffee" class="border border-amber-800 rounded-lg p-2 mb-4 max-w-md text-center"></textarea>
+            <button type="submit" class="bg-amber-800 text-white rounded-lg p-2 hover:underline max-w-md mx-auto">Submit</button>
+
+        </form>
+    </section>
+    <secton id="menu" class="bg-gray-100 py-10">
+        <h2 class="text-3xl text-center text-amber-800 font-bold mb-6">Our Coffee Menu</h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-5">
+                <h3 class="text-xl font-semibold mb-2">Cappuccino</h3>
+                <img src="./cappuccino.webp" class="h-48 w-full object-cover mb-4">
+  
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-5">
+                <h3 class="text-xl font-semibold mb-2">Latte</h3>
+                <img src="./latte.webp" class="h-48 w-full object-cover mb-4">
+             
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-5">
+                <h3 class="text-xl font-semibold mb-2">Americano</h3>
+                <img src="./americano.jpeg" class="h-48 w-full object-cover mb-4">
+                 
+            </div><div class="bg-white rounded-lg shadow-lg p-5">
+                <h3 class="text-xl font-semibold mb-2">Mocha</h3>
+                <img src="./mocha.webp" class="h-48 w-full object-cover mb-4">
+
+            </div><div class="bg-white rounded-lg shadow-lg p-5">
+                <h3 class="text-xl font-semibold mb-2">Iced Coffee</h3>
+                <img src="./iced coffee.webp" class="h-48 w-full object-cover mb-4">
+               
+            </div><div class="bg-white rounded-lg shadow-lg p-5">
+                <h3 class="text-xl font-semibold mb-2">Cold brew</h3>
+                <img src="./cold brew.webp" class="h-48 w-full object-cover mb-4">
+             
+            </div><div class="bg-white rounded-lg shadow-lg p-5">
+                <h3 class="text-xl font-semibold mb-2">Frappe</h3>
+                <img src="./frappe.webp" class="h-48 w-full object-cover mb-4">
+              
+            </div><div class="bg-white rounded-lg shadow-lg p-5">
+                <h3 class="text-xl font-semibold mb-2">Expresso</h3>
+                <img src="./iced coffee.webp" class="h-48 w-full object-cover mb-4">
+            
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-16 bg-amber-800 text-gray-100">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+    <p class="mb-6">Have questions or need tips? Reach out!</p>
+    <p class="flex justify-center gap-4 text-xl">
+      <a href="mailto:infoCoffehub.com" class="hover:text-white" aria-label="Email"><i class="fa-solid fa-envelope-open-text"></i></a>
+      <a href="#" class="hover:text-white" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="hover:text-white" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" class="hover:text-white" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+    </p>
+  </div>
+</section>
+</body>
+</html>
